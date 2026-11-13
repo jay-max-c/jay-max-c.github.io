@@ -1,5 +1,132 @@
 const projects=[
   {
+    "id": "sintra",
+    "title": "Reactivation of a Tennis Centre in Sintra",
+    "category": "architecture",
+    "label": "Bachelor Diploma · Architecture & Landscape",
+    "location": "Sintra, Portugal",
+    "year": "2025–26",
+    "short": "SIN",
+    "art": "#b7bba9",
+    "shape": "linear-gradient(113deg,transparent 25%,#6f7c6b 25% 54%,transparent 54%),linear-gradient(22deg,#c8c9b8 10%,#879482 80%)",
+    "description": "A landscape-led proposal for reactivating a hillside estate in Sintra as a tennis club and wellness centre. Four courts are arranged around a low-rise clubhouse, a retained garden pavilion and mature planting. Reception and café spaces connect with fitness, changing and recovery facilities, while parking and service spaces sit below ground. Pitched roof modules respond to the surrounding roofscape and accommodate solar panels. The project is presented through site analysis, plans, sections, construction studies and design visualisations.",
+    "credits": "Author: Jinlin Li. Supervisor: Dr inż. arch. Wojciech Wójcikowski, prof. PK. Cracow University of Technology · Spatial Planning, Urban and Rural Design A-5 · Academic year 2025/26.",
+    "status": "Diploma proposal · Six presentation boards",
+    "images": [
+      {
+        "src": "assets/projects/tennis-cover.webp",
+        "caption": "Aerial design visualisation of the tennis centre; an academic proposal, not a completed building."
+      },
+      {
+        "src": "assets/projects/tennis-board-1.webp",
+        "caption": "Board 01 · Site context, landscape history, environmental analysis and design strategy."
+      },
+      {
+        "src": "assets/projects/tennis-board-2.webp",
+        "caption": "Board 02 · Site, ground-floor, roof and underground plans."
+      },
+      {
+        "src": "assets/projects/tennis-board-3.webp",
+        "caption": "Board 03 · Wellness layout, building sections and construction detail."
+      },
+      {
+        "src": "assets/projects/tennis-board-4.webp",
+        "caption": "Board 04 · Elevations and wellness-area visualisation."
+      },
+      {
+        "src": "assets/projects/tennis-board-5.webp",
+        "caption": "Board 05 · Tennis court layout, construction details and clubhouse visualisation."
+      },
+      {
+        "src": "assets/projects/tennis-board-6.webp",
+        "caption": "Board 06 · Two aerial visualisations showing the proposed club within the wooded hillside."
+      }
+    ]
+  },
+  {
+    "id": "geometric-weaving",
+    "title": "Geometric Weaving",
+    "category": "architecture",
+    "label": "Architecture · Urban Infill",
+    "location": "Kraków, Poland",
+    "year": "2026 portfolio",
+    "status": "Design proposal · Urban studies and concept views",
+    "credits": "Presented in Jinlin Li’s 2026 portfolio, pages 2–5. Project date is not specified in the selected portfolio entry.",
+    "description": "An intervention within an established urban block that keeps the continuity of the street edge while opening new pedestrian passages. Folded and rotated volumes create shared voids and thresholds, connecting the interior of the site with everyday street movement. The proposal studies how a contemporary addition can work with existing alignments and spatial memory.",
+    "images": [
+      {
+        "src": "assets/projects/weaving-cover.webp",
+        "caption": "Overhead concept view from the Geometric Weaving portfolio entry."
+      },
+      {
+        "src": "assets/projects/weaving-study.webp",
+        "caption": "Urban context, pedestrian connections and massing studies."
+      },
+      {
+        "src": "assets/projects/weaving-views.webp",
+        "caption": "Concept views of folded volumes within the surrounding street fabric."
+      }
+    ]
+  },
+  {
+    "id": "warszawska-campus",
+    "title": "Warszawska 24 — Campus Building",
+    "category": "architecture",
+    "label": "Academic Collaboration · Learning & Public Space",
+    "location": "Kraków, Poland",
+    "year": "2024–25",
+    "status": "Academic proposal · Joint project",
+    "credits": "Authors: Jinlin Li and Qiancheng Yu. Architectural and Urban Design 4, 2024/25 · Cracow University of Technology. Class supervisor: Anna Porębska. Tutor: prof. Marta Urbańska, Ph.D.",
+    "description": "A multifunctional campus building at Warszawska 24, conceived as a place for learning, exhibition and exchange. A sequence of volumes accommodates public exhibition and multipurpose spaces at ground level, with workshops and academic spaces above. Circulation connects the street edge and campus, while glazed areas, vertical louvres and red panels distinguish the elevations.",
+    "images": [
+      {
+        "src": "assets/projects/campus-cover.webp",
+        "caption": "Aerial design visualisation · Jinlin Li and Qiancheng Yu."
+      },
+      {
+        "src": "assets/projects/campus-plans.webp",
+        "caption": "Programme, interior studies and floor plans · Joint AUD 4 project."
+      },
+      {
+        "src": "assets/projects/campus-section.webp",
+        "caption": "Building section showing the vertical organisation of shared spaces."
+      },
+      {
+        "src": "assets/projects/campus-elevations.webp",
+        "caption": "Four elevations with glazing, vertical elements and red facade panels."
+      }
+    ]
+  },
+  {
+    "id": "timber-cabin",
+    "title": "Taizhou — Timber Cabin Prototype",
+    "category": "architecture",
+    "categories": [
+      "architecture",
+      "research"
+    ],
+    "label": "Timber Construction · Design & Prototyping",
+    "location": "Taizhou, Zhejiang, China",
+    "year": "2026 portfolio",
+    "status": "Design development · Prototype assembly",
+    "credits": "Jinlin Li’s portfolio describes participation in material selection, structural and spatial design, assembly planning and prototype construction. The selected entry does not specify a project date or a complete team list.",
+    "description": "A standalone timber cabin developed through design and hands-on prototype assembly. The portfolio describes a change from an initial light timber proposal to a heavier timber system in response to construction feasibility, cost and environmental conditions. Making the prototype allowed connections, assembly sequence and material choices to be examined alongside the spatial design.",
+    "images": [
+      {
+        "src": "assets/projects/timber-cover.webp",
+        "caption": "Cabin prototype photograph reproduced from the project portfolio."
+      },
+      {
+        "src": "assets/projects/timber-design.webp",
+        "caption": "Cutaway design view showing the cabin’s spatial organisation."
+      },
+      {
+        "src": "assets/projects/timber-assembly.webp",
+        "caption": "Assembly diagram and two prototype photographs from the portfolio."
+      }
+    ]
+  },
+  {
     "id": "dunhuang",
     "title": "Dunhuang Artist Studio",
     "category": "architecture",
@@ -74,18 +201,6 @@ const projects=[
         "caption": "Courtyard ground-floor plan · Original sheet scale 1:50; on-screen display is not to scale."
       }
     ]
-  },
-  {
-    "id": "sintra",
-    "title": "Reactivation of a Tennis Centre",
-    "category": "architecture",
-    "label": "Architecture · Adaptive Reuse",
-    "location": "Sintra, Portugal",
-    "year": "2026",
-    "short": "SIN",
-    "art": "#b7bba9",
-    "shape": "linear-gradient(113deg,transparent 25%,#6f7c6b 25% 54%,transparent 54%),linear-gradient(22deg,#c8c9b8 10%,#879482 80%)",
-    "description": "Bachelor's diploma project exploring the reactivation of a tennis centre in Sintra. This portfolio entry will present the spatial strategy, architectural drawings, technical development and final proposal."
   },
   {
     "id": "escac",
