@@ -18,10 +18,10 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Jinlin Li — home"><span class="brand-name">JINLIN LI<span class="brand-dot">.</span></span><span class="brand-titles"><span>Architecture &amp; Multidisciplinary Artist</span></span></a>
+    <a class="brand" href="#home" aria-label="Jinlin Li — home"><span class="brand-name">JINLIN LI</span><span class="brand-titles"><span>Architecture · Art · Research</span></span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation"><span></span><span></span></button>
     <nav id="site-nav" class="nav" aria-label="Main navigation">
-      <a href="#home">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#cv">CV</a><a href="#contact">Contact</a>
+      <a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
     </nav>
   </header>
   <main id="main">
@@ -60,7 +60,8 @@
         <button class="filter" data-filter="research" aria-pressed="false">Research</button>
       </div>
       <div class="project-grid" id="project-grid" aria-live="polite"></div>
-      <p class="note">Seven projects include selected drawings, visualisations or prototype photographs. Entries still awaiting documentation are labelled. Design proposals are distinguished from prototype and process photographs.</p>
+      <button class="view-all-projects text-link" id="view-all-projects" type="button" hidden>View all projects <span>↓</span></button>
+      <p class="note">Selected projects appear first. Use the filters or view all projects to browse the complete archive. The Gaudí entry presents concept references; proposals, prototypes and process photographs are labelled.</p>
     </section>
     <section id="about" class="section-wrap about-section">
       <div class="section-head"><div><span class="eyebrow">03 / PROFILE</span><h2>About me<span class="period">.</span></h2></div></div>
@@ -75,10 +76,9 @@
       <div class="section-head"><div><span class="eyebrow">04 / BACKGROUND</span><h2>CV &amp; expertise<span class="period">.</span></h2></div></div>
       <div class="cv-grid"><div><h3>Education</h3><div class="cv-item"><span>2026 — PRESENT</span><div><strong>Master's studies in Architecture</strong><p>Cracow University of Technology · Heritage Protection</p></div></div><div class="cv-item"><span>2023 — 2026</span><div><strong>Bachelor of Architecture</strong><p>Cracow University of Technology</p></div></div></div>
       <div><h3>Selected capabilities</h3><div class="cv-item"><span>DESIGN</span><div><p>Architectural design, adaptive reuse, spatial concepts, visual communication</p></div></div><div class="cv-item"><span>DIGITAL</span><div><p>Rhino, Grasshopper, AutoCAD, QGIS, Blender, Unreal Engine, TouchDesigner</p></div></div><div class="cv-item"><span>PRACTICE</span><div><p>Interdisciplinary coordination, exhibition concepts and cultural project development</p></div></div></div></div>
-      <a class="text-link cv-download" href="mailto:?subject=CV%20request%20%E2%80%94%20Jinlin%20Li" id="cv-request">Request full CV <span>↗</span></a>
       <p class="note">A downloadable CV will be added after final review.</p>
     </section>
-    <section id="contact" class="contact-section"><div class="section-wrap"><span class="eyebrow">05 / GET IN TOUCH</span><h2>Have a project<br>in <em>mind?</em></h2><p>Open to conversations on architecture, research, art and collaborative projects.</p><div class="contact-links"><a href="https://github.com/jay-max-c" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:hello@example.com" class="email-pending" title="Replace with your real email">Email (to be added) ↗</a></div><div class="footer"><span>© <span id="year">2026</span> JINLIN LI</span><span>DESIGNED TO EVOLVE</span><a href="#home">BACK TO TOP ↑</a></div></div></section>
+    <section id="contact" class="contact-section"><div class="section-wrap"><span class="eyebrow">05 / GET IN TOUCH</span><h2>Have a project<br>in <em>mind?</em></h2><p>Open to conversations on architecture, research, art and collaborative projects.</p><div class="contact-links"><a href="https://github.com/jay-max-c" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><div class="footer"><span>© <span id="year">2026</span> JINLIN LI</span><span>DESIGNED TO EVOLVE</span><a href="#home">BACK TO TOP ↑</a></div></div></section>
   </main>
   <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><div class="dialog-head"><span class="eyebrow" id="dialog-type"></span><button class="close-dialog" aria-label="Close project">×</button></div><div id="dialog-art" class="dialog-art"></div><div class="dialog-content"><div class="dialog-meta"><span id="dialog-location"></span><span id="dialog-year"></span></div><h2 id="dialog-title"></h2><p id="dialog-description"></p><p id="dialog-credits" class="project-credits"></p><div id="dialog-gallery" class="project-gallery"></div><div class="dialog-footer"><span id="dialog-status">Detailed images and documentation coming soon.</span><button class="close-dialog text-link">← Back to work</button></div></div></div></dialog>
 </body>

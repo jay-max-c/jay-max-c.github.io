@@ -189,6 +189,7 @@ const projects=[
     "id": "meijiang",
     "title": "Meijiang Courtyard Renovation",
     "category": "architecture",
+    "coverFit": "contain",
     "label": "Architecture · Courtyard & Landscape",
     "location": "Meijiang, China",
     "year": "2026",
@@ -240,34 +241,52 @@ const projects=[
   },
   {
     "id": "sonora",
-    "title": "Sonora Gaudí",
+    "title": "Sonoro Gaudí — 高迪之声",
     "category": "art",
-    "label": "Art & Installation · Cultural Space",
-    "location": "Spain",
-    "year": "2024–2026",
+    "label": "Art & Installation · Exhibition Concept",
+    "location": "Hangzhou, China",
+    "year": "2026",
     "short": "SG",
     "art": "#b6a899",
     "shape": "radial-gradient(ellipse at 60% 55%,#796659 0 22%,transparent 23%),linear-gradient(40deg,#d1bca4,#99846f)",
-    "description": "An interdisciplinary creative project engaging with architecture and cultural interpretation. Visual material, collaborators and individual contributions will be credited when uploaded."
+    "description": "A concept proposal for Sonoro Gaudí 2026 at Hangzhou Golden Sands Lake Grand Theater. The presentation connects art, nature and origins through installations in the theater’s public spaces, alongside exhibition, audiovisual, performance and cultural programming. These pages document proposed ideas and visual references; they do not establish that the installations were built.",
+    "status": "Concept proposal · Selected presentation pages",
+    "credits": "Source: 高迪之声 2026-杭州金沙湖大剧院, concept presentation, pages 1–3. Team credits and Jinlin Li’s individual contribution remain to be confirmed.",
+    "images": [
+      {
+        "src": "assets/projects/gaudi-1.webp",
+        "caption": "Presentation cover · Sonoro Gaudí 2026; reference imagery from the concept document."
+      },
+      {
+        "src": "assets/projects/gaudi-2.webp",
+        "caption": "Art, nature and origins · Rock texture reference proposed for a public-space installation."
+      },
+      {
+        "src": "assets/projects/gaudi-3.webp",
+        "caption": "Proposed cultural programme · Exhibition, installation art, audiovisual, performance and events."
+      }
+    ]
   }
 ];
 const grid=document.querySelector("#project-grid"),dialog=document.querySelector("#project-dialog");
+const viewAllButton=document.querySelector("#view-all-projects");
 const categories={architecture:"Architecture",art:"Art & Installation",research:"Research"};
+let expanded=false;
 const escapeHtml=s=>s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-function render(filter="all"){grid.replaceChildren();projects.filter(p=>filter==="all"||p.category===filter||p.categories?.includes(filter)).forEach(p=>{const b=document.createElement("button");b.type="button";b.className="project-card";b.setAttribute("aria-label","View "+p.title);b.innerHTML=(p.images ? '<div class="project-art has-image"><img src="'+p.images[0].src+'" alt="'+escapeHtml(p.images[0].caption)+'" loading="lazy" width="1400" height="1000"><span class="image-label">'+escapeHtml(p.status)+'</span></div>' : '<div class="project-art" style="--art:'+p.art+';--shape:'+p.shape+'"><span class="project-ghost">'+p.short+'</span><span class="image-label">PROJECT VISUAL / TO BE ADDED</span></div>')+'<div class="project-info"><div><h3>'+escapeHtml(p.title)+'</h3><p>'+escapeHtml(p.label)+' · '+escapeHtml(p.year)+'</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>';b.addEventListener("click",()=>openProject(p));grid.append(b)})}
+function render(filter="all"){const matching=projects.filter(p=>filter==="all"||p.category===filter||p.categories?.includes(filter));const visible=expanded?matching:matching.slice(0,6);grid.replaceChildren();visible.forEach(p=>{const b=document.createElement("button");b.type="button";b.className="project-card";b.setAttribute("aria-label","View "+p.title);const summary=p.description.length>230?p.description.slice(0,230).replace(/\s+\S*$/,'')+"…":p.description;b.innerHTML=(p.images ? '<div class="project-art has-image"'+(p.coverFit==='contain'?' data-fit="contain"':'')+'><img src="'+p.images[0].src+'" alt="'+escapeHtml(p.images[0].caption)+'" loading="lazy" width="1400" height="1000"><span class="image-label">'+escapeHtml(p.status||p.label)+'</span></div>' : '<div class="project-art" style="--art:'+p.art+';--shape:'+p.shape+'"><span class="project-ghost">'+p.short+'</span><span class="image-label">PROJECT VISUAL / TO BE ADDED</span></div>')+'<div class="project-info"><div><span class="project-meta">'+escapeHtml(p.label)+' · '+escapeHtml(p.location)+' · '+escapeHtml(p.year)+'</span><h3>'+escapeHtml(p.title)+'</h3><p class="project-summary">'+escapeHtml(summary)+'</p><span class="project-status">'+escapeHtml(p.status||"Documentation in progress")+'</span></div><span class="project-arrow" aria-hidden="true">↗</span></div>';b.addEventListener("click",()=>openProject(p));grid.append(b)});viewAllButton.hidden=matching.length<=6;viewAllButton.innerHTML=expanded?'Show fewer projects <span>↑</span>':'View all '+matching.length+' projects <span>↓</span>';viewAllButton.setAttribute("aria-expanded",String(expanded))}
 function openProject(p){document.querySelector("#dialog-type").textContent=p.label;document.querySelector("#dialog-location").textContent=p.location;document.querySelector("#dialog-year").textContent=p.year;document.querySelector("#dialog-title").textContent=p.title;document.querySelector("#dialog-description").textContent=p.description;const art=document.querySelector("#dialog-art");art.style.setProperty("--art",p.art);art.style.setProperty("--shape",p.shape);art.replaceChildren();art.classList.toggle('has-image',Boolean(p.images));
 if(p.images){const cover=document.createElement('img');cover.src=p.images[0].src;cover.alt=p.images[0].caption;art.append(cover)}
 document.querySelector('#dialog-credits').textContent=p.credits||'';
 document.querySelector('#dialog-status').textContent=p.status||'Detailed images and documentation coming soon.';
 const gallery=document.querySelector('#dialog-gallery');gallery.replaceChildren();
-for(const item of p.images||[]){const figure=document.createElement('figure');const link=document.createElement('a');link.href=item.src;link.target='_blank';link.rel='noopener';link.setAttribute('aria-label','Open full image: '+item.caption);const image=document.createElement('img');image.src=item.src;image.alt=item.caption;image.loading='lazy';link.append(image);const caption=document.createElement('figcaption');caption.textContent=item.caption;figure.append(link,caption);gallery.append(figure)}
+for(const item of (p.images||[]).slice(1)){const figure=document.createElement('figure');const link=document.createElement('a');link.href=item.src;link.target='_blank';link.rel='noopener';link.setAttribute('aria-label','Open full image: '+item.caption);const image=document.createElement('img');image.src=item.src;image.alt=item.caption;image.loading='lazy';link.append(image);const caption=document.createElement('figcaption');caption.textContent=item.caption;figure.append(link,caption);gallery.append(figure)}
 dialog.showModal();dialog.scrollTop=0;history.replaceState(null,"","#project-"+p.id)}
 function closeProject(){dialog.close();history.replaceState(null,"","#work")}
-document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>{x.classList.toggle("active",x===b);x.setAttribute("aria-pressed",String(x===b))});render(b.dataset.filter)}));
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>{x.classList.toggle("active",x===b);x.setAttribute("aria-pressed",String(x===b))});expanded=false;render(b.dataset.filter)}));
+viewAllButton.addEventListener("click",()=>{expanded=!expanded;render(document.querySelector(".filter.active").dataset.filter)});
 document.querySelectorAll(".close-dialog").forEach(b=>b.addEventListener("click",closeProject));
 dialog.addEventListener("click",e=>{if(e.target===dialog)closeProject()});dialog.addEventListener("close",()=>{if(location.hash.startsWith("#project-"))history.replaceState(null,"","#work")});
 const toggle=document.querySelector(".menu-toggle"),nav=document.querySelector(".nav");toggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open))});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false")}));
 document.querySelector("#year").textContent=String(new Date().getFullYear());
-document.querySelector(".email-pending").addEventListener("click",e=>e.preventDefault());
 document.querySelector('[data-filter="all"] sup').textContent=String(projects.length).padStart(2,'0');
 render();const deep=location.hash.match(/^#project-(.+)$/);if(deep){const p=projects.find(x=>x.id===(deep[1]==="sonic"?"yunxi":deep[1]));if(p)openProject(p)}
