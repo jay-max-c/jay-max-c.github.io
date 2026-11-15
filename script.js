@@ -284,6 +284,29 @@ dialog.showModal();dialog.scrollTop=0;history.replaceState(null,"","#project-"+p
 function closeProject(){dialog.close();history.replaceState(null,"","#work")}
 document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>{x.classList.toggle("active",x===b);x.setAttribute("aria-pressed",String(x===b))});expanded=false;render(b.dataset.filter)}));
 viewAllButton.addEventListener("click",()=>{expanded=!expanded;render(document.querySelector(".filter.active").dataset.filter)});
+const prefersReducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)");
+if(!prefersReducedMotion.matches){
+  document.body.classList.add("js-scroll-transition");
+  const homeSection=document.querySelector("#home"),workSection=document.querySelector("#work"),intro=document.querySelector(".personal-intro"),workHead=workSection?.querySelector(".section-head");
+  let ticking=false;
+  const updateScrollTransition=()=>{
+    ticking=false;
+    if(!homeSection||!workSection||!intro||!workHead)return;
+    const workTop=workSection.getBoundingClientRect().top+window.scrollY;
+    const start=Math.max(0,workTop-window.innerHeight*.68);
+    const end=Math.max(start+1,workTop-window.innerHeight*.1);
+    const progress=Math.min(1,Math.max(0,(window.scrollY-start)/(end-start)));
+    document.documentElement.style.setProperty("--handoff-progress",progress.toFixed(3));
+    document.documentElement.style.setProperty("--intro-shift",`${(-32*progress).toFixed(2)}px`);
+    document.documentElement.style.setProperty("--intro-opacity",(1-progress*.42).toFixed(3));
+    document.documentElement.style.setProperty("--work-shift",`${(24*(1-progress)).toFixed(2)}px`);
+    document.documentElement.style.setProperty("--work-opacity",(.58+progress*.42).toFixed(3));
+  };
+  const requestScrollTransitionUpdate=()=>{if(!ticking){ticking=true;window.requestAnimationFrame(updateScrollTransition)}};
+  window.addEventListener("scroll",requestScrollTransitionUpdate,{passive:true});
+  window.addEventListener("resize",requestScrollTransitionUpdate,{passive:true});
+  updateScrollTransition();
+}
 document.querySelectorAll(".close-dialog").forEach(b=>b.addEventListener("click",closeProject));
 dialog.addEventListener("click",e=>{if(e.target===dialog)closeProject()});dialog.addEventListener("close",()=>{if(location.hash.startsWith("#project-"))history.replaceState(null,"","#work")});
 const toggle=document.querySelector(".menu-toggle"),nav=document.querySelector(".nav");toggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open))});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false")}));
