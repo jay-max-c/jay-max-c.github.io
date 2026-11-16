@@ -49,7 +49,7 @@ const projects=[
     "category": "architecture",
     "label": "Architecture · Urban Infill",
     "location": "Kraków, Poland",
-    "year": "2026 portfolio",
+    "year": "Date not specified",
     "status": "Design proposal · Urban studies and concept views",
     "credits": "Presented in Jinlin Li’s 2026 portfolio, pages 2–5. Project date is not specified in the selected portfolio entry.",
     "description": "An intervention within an established urban block that keeps the continuity of the street edge while opening new pedestrian passages. Folded and rotated volumes create shared voids and thresholds, connecting the interior of the site with everyday street movement. The proposal studies how a contemporary addition can work with existing alignments and spatial memory.",
@@ -65,6 +65,74 @@ const projects=[
       {
         "src": "assets/projects/weaving-views.webp",
         "caption": "Concept views of folded volumes within the surrounding street fabric."
+      }
+    ]
+  },
+  {
+    "id": "barcelona-mobile-coffee-bar",
+    "title": "Barcelona — Mobile Coffee Bar",
+    "category": "architecture",
+    "coverFit": "contain",
+    "label": "Hospitality · Mobile Furniture",
+    "location": "Barcelona, Spain",
+    "year": "2026",
+    "description": "Three wheeled modules organise the coffee bar around grinding and ice, espresso and rinsing, and pastry display with undercounter refrigeration. The drawings show the equipment layout and dimensioned frames for each module.",
+    "status": "Design documentation · Visuals and technical drawings",
+    "images": [
+      {
+        "src": "assets/projects/barcelona-coffee-cover.webp",
+        "caption": "Overall view of the three mobile counter modules."
+      },
+      {
+        "src": "assets/projects/barcelona-coffee-1.webp",
+        "caption": "Perspective view of the counter design with espresso equipment."
+      },
+      {
+        "src": "assets/projects/barcelona-coffee-2.webp",
+        "caption": "Assembled plan and elevation showing the equipment layout."
+      },
+      {
+        "src": "assets/projects/barcelona-coffee-3.webp",
+        "caption": "Dimensioned countertop plans and frame drawings for the three modules."
+      },
+      {
+        "src": "assets/projects/barcelona-coffee-4.webp",
+        "caption": "Dimensioned elevations showing casters and space for ice, filtration and refrigeration equipment."
+      }
+    ]
+  },
+  {
+    "id": "lucky-film-heping-road",
+    "title": "Lucky Film — Heping Road Film & Arts Center",
+    "category": "architecture",
+    "label": "Architecture · Film & Arts Center",
+    "location": "Tianjin, China",
+    "year": "2026–ongoing",
+    "short": "LF",
+    "art": "#bdb8ae",
+    "shape": "linear-gradient(145deg,transparent 24%,#4a4742 24% 50%,transparent 50%),linear-gradient(25deg,#e8e1d6,#837d73)",
+    "description": "An ongoing, long-term collaboration with Lucky Film, China's largest domestic film supplier, comparable to Fujifilm. The current project is the design of a public film and arts centre on Heping Road, Tianjin, within a wider programme for seven publicly accessible centres across mainland China. The work also includes icon and typeface design. The images are design visualisations; the project is in progress.",
+    "status": "In progress · Design development",
+    "document": {
+      "href": "assets/projects/lucky-film-heping-road-design.pdf",
+      "label": "Open Heping Road design PDF ↗"
+    },
+    "images": [
+      {
+        "src": "assets/projects/lucky-film-heping-view-01.png",
+        "caption": "Interior design visualisation showing the proposed gallery, display areas and stair. Project in progress."
+      },
+      {
+        "src": "assets/projects/lucky-film-heping-view-02.png",
+        "caption": "Interior design visualisation of the proposed gallery and reading display area. Project in progress."
+      },
+      {
+        "src": "assets/projects/lucky-film-heping-view-03.png",
+        "caption": "Interior design visualisation showing a shared table beside the exhibition gallery. Project in progress."
+      },
+      {
+        "src": "assets/projects/lucky-film-heping-view-04.png",
+        "caption": "Interior design visualisation of the proposed exhibition gallery. Project in progress."
       }
     ]
   },
@@ -107,7 +175,7 @@ const projects=[
     ],
     "label": "Timber Construction · Design & Prototyping",
     "location": "Taizhou, Zhejiang, China",
-    "year": "2026 portfolio",
+    "year": "Date not specified",
     "status": "Design development · Prototype assembly",
     "credits": "Jinlin Li’s portfolio describes participation in material selection, structural and spatial design, assembly planning and prototype construction. The selected entry does not specify a project date or a complete team list.",
     "description": "A standalone timber cabin developed through design and hands-on prototype assembly. The portfolio describes a change from an initial light timber proposal to a heavier timber system in response to construction feasibility, cost and environmental conditions. Making the prototype allowed connections, assembly sequence and material choices to be examined alongside the spatial design.",
@@ -123,6 +191,14 @@ const projects=[
       {
         "src": "assets/projects/timber-assembly.webp",
         "caption": "Assembly diagram and two prototype photographs from the portfolio."
+      },
+      {
+        "src": "assets/projects/timber-assembly-site.jpg",
+        "caption": "Timber components and floor framing assembled on site; process photograph."
+      },
+      {
+        "src": "assets/projects/timber-floor-plan.png",
+        "caption": "Floor plan drawing for the timber cabin, with furniture layout."
       }
     ]
   },
@@ -205,39 +281,54 @@ const projects=[
   },
   {
     "id": "escac",
-    "title": "ESCAC — Adaptive Reuse",
+    "title": "ESCAC Student Residence — Adaptive Reuse",
     "category": "architecture",
-    "label": "Architecture · Cultural Spaces",
-    "location": "Catalonia, Spain",
+    "label": "Architecture · Student Housing",
+    "location": "Terrassa, Spain",
     "year": "2024–2026",
     "short": "ES",
     "art": "#bfc7c0",
     "shape": "linear-gradient(150deg,transparent 27%,#566b66 27% 51%,transparent 51%),linear-gradient(24deg,#b1b7ab 20%,#7a8b7e 80%)",
-    "description": "Architectural practice project related to the adaptation of ESCAC spaces. Images, precise scope and individual responsibilities will be added after verification."
-  },
-  {
-    "id": "girona",
-    "title": "Girona — Hospitality Concept",
-    "category": "architecture",
-    "label": "Architecture · Hospitality",
-    "location": "Girona, Spain",
-    "year": "2024–2026",
-    "short": "GI",
-    "art": "#d0c3a9",
-    "shape": "linear-gradient(70deg,transparent 34%,#ad9474 34% 61%,transparent 61%),linear-gradient(0deg,#d6c8ad,#9b937c)",
-    "description": "Hospitality and spatial design project in the Girona region. Selected design process and outcomes will be documented here."
-  },
-  {
-    "id": "olot",
-    "title": "Olot — Spatial Design",
-    "category": "architecture",
-    "label": "Architecture · Public / Cultural",
-    "location": "Olot, Spain",
-    "year": "2024–2026",
-    "short": "OL",
-    "art": "#aab1b1",
-    "shape": "linear-gradient(130deg,transparent 28%,#667b7e 28% 59%,transparent 59%),linear-gradient(0deg,#c6c9c3,#7c8f90)",
-    "description": "Architectural project in Olot, addressing spatial organisation and context. Further documentation and verified project details will be added."
+    "description": "This ongoing project repurposes underused areas within a teaching building as student accommodation and shared spaces, responding to growing space pressure in Terrassa. These early-stage photographs document the existing building, interiors and shared areas.",
+    "status": "In progress · Early-stage site photographs",
+    "images": [
+      {
+        "src": "assets/projects/escac-existing-exterior-01.jpg",
+        "caption": "Exterior view of the ESCAC building in Terrassa, photographed during the early project stage."
+      },
+      {
+        "src": "assets/projects/escac-existing-interior-01.jpg",
+        "caption": "Existing interior space documented before its adaptation."
+      },
+      {
+        "src": "assets/projects/escac-existing-interior-02.jpg",
+        "caption": "Existing interior and glazed partitions documented during the early project stage."
+      },
+      {
+        "src": "assets/projects/escac-existing-interior-03.jpg",
+        "caption": "Existing room with windows facing the surrounding street."
+      },
+      {
+        "src": "assets/projects/escac-existing-shared-space.jpg",
+        "caption": "Shared interior area documented on site."
+      },
+      {
+        "src": "assets/projects/escac-existing-corridor.jpg",
+        "caption": "Existing interior circulation space documented on site."
+      },
+      {
+        "src": "assets/projects/escac-existing-teaching-space.jpg",
+        "caption": "Existing teaching space photographed during the early project stage."
+      },
+      {
+        "src": "assets/projects/escac-existing-exterior-02.jpg",
+        "caption": "Street-side view of the ESCAC building in Terrassa."
+      },
+      {
+        "src": "assets/projects/escac-existing-circulation.jpg",
+        "caption": "Existing glazed circulation area documented on site."
+      }
+    ]
   },
   {
     "id": "sonora",
@@ -249,8 +340,8 @@ const projects=[
     "short": "SG",
     "art": "#b6a899",
     "shape": "radial-gradient(ellipse at 60% 55%,#796659 0 22%,transparent 23%),linear-gradient(40deg,#d1bca4,#99846f)",
-    "description": "A concept proposal for Sonoro Gaudí 2026 at Hangzhou Golden Sands Lake Grand Theater. The presentation connects art, nature and origins through installations in the theater’s public spaces, alongside exhibition, audiovisual, performance and cultural programming. These pages document proposed ideas and visual references; they do not establish that the installations were built.",
-    "status": "Concept proposal · Selected presentation pages",
+    "description": "A concept proposal for Sonoro Gaudí 2026 at Hangzhou Golden Sands Lake Grand Theater. The presentation connects art, nature and origins through installations in the theater’s public spaces, alongside exhibition, audiovisual, performance and cultural programming. The gallery includes proposal pages, sculpture maquettes and a wiring diagram as concept and development material; it does not establish that the installations were built.",
+    "status": "Concept proposal & development material · Implementation unconfirmed",
     "credits": "Source: 高迪之声 2026-杭州金沙湖大剧院, concept presentation, pages 1–3. Team credits and Jinlin Li’s individual contribution remain to be confirmed.",
     "images": [
       {
@@ -264,20 +355,43 @@ const projects=[
       {
         "src": "assets/projects/gaudi-3.webp",
         "caption": "Proposed cultural programme · Exhibition, installation art, audiovisual, performance and events."
+      },
+      {
+        "src": "assets/projects/gaudi-maquette-orange.jpg",
+        "caption": "Orange sculpture maquette photographed against a projected backdrop."
+      },
+      {
+        "src": "assets/projects/gaudi-sculpture-landscape.jpg",
+        "caption": "Red sculptural maquette photographed within a planted outdoor setting."
+      },
+      {
+        "src": "assets/projects/gaudi-suspended-forms.jpg",
+        "caption": "Suspended red cutout forms photographed in a woodland setting."
+      },
+      {
+        "src": "assets/projects/gaudi-maquette-side.jpg",
+        "caption": "Side view of the orange sculpture maquette against a projected backdrop."
+      },
+      {
+        "src": "assets/projects/gaudi-electronics-wiring.png",
+        "caption": "Electronics wiring diagram supplied with the Sonoro Gaudí 2026 project material."
       }
     ]
   }
 ];
+const warszawskaIndex=projects.findIndex(project=>project.id==="warszawska-campus");
+if(warszawskaIndex>=0)projects.push(projects.splice(warszawskaIndex,1)[0]);
 const grid=document.querySelector("#project-grid"),dialog=document.querySelector("#project-dialog");
 const viewAllButton=document.querySelector("#view-all-projects");
 const categories={architecture:"Architecture",art:"Art & Installation",research:"Research"};
 let expanded=false;
 const escapeHtml=s=>s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-function render(filter="all"){const matching=projects.filter(p=>filter==="all"||p.category===filter||p.categories?.includes(filter));const visible=expanded?matching:matching.slice(0,6);grid.replaceChildren();visible.forEach(p=>{const b=document.createElement("button");b.type="button";b.className="project-card";b.setAttribute("aria-label","View "+p.title);const summary=p.description.length>230?p.description.slice(0,230).replace(/\s+\S*$/,'')+"…":p.description;b.innerHTML=(p.images ? '<div class="project-art has-image"'+(p.coverFit==='contain'?' data-fit="contain"':'')+'><img src="'+p.images[0].src+'" alt="'+escapeHtml(p.images[0].caption)+'" loading="lazy" width="1400" height="1000"><span class="image-label">'+escapeHtml(p.status||p.label)+'</span></div>' : '<div class="project-art" style="--art:'+p.art+';--shape:'+p.shape+'"><span class="project-ghost">'+p.short+'</span><span class="image-label">PROJECT VISUAL / TO BE ADDED</span></div>')+'<div class="project-info"><div><span class="project-meta">'+escapeHtml(p.label)+' · '+escapeHtml(p.location)+' · '+escapeHtml(p.year)+'</span><h3>'+escapeHtml(p.title)+'</h3><p class="project-summary">'+escapeHtml(summary)+'</p><span class="project-status">'+escapeHtml(p.status||"Documentation in progress")+'</span></div><span class="project-arrow" aria-hidden="true">↗</span></div>';b.addEventListener("click",()=>openProject(p));grid.append(b)});viewAllButton.hidden=matching.length<=6;viewAllButton.innerHTML=expanded?'Show fewer projects <span>↑</span>':'View all '+matching.length+' projects <span>↓</span>';viewAllButton.setAttribute("aria-expanded",String(expanded))}
-function openProject(p){document.querySelector("#dialog-type").textContent=p.label;document.querySelector("#dialog-location").textContent=p.location;document.querySelector("#dialog-year").textContent=p.year;document.querySelector("#dialog-title").textContent=p.title;document.querySelector("#dialog-description").textContent=p.description;const art=document.querySelector("#dialog-art");art.style.setProperty("--art",p.art);art.style.setProperty("--shape",p.shape);art.replaceChildren();art.classList.toggle('has-image',Boolean(p.images));
+function render(filter="all"){const matching=projects.filter(p=>filter==="all"||p.category===filter||p.categories?.includes(filter));const visible=expanded?matching:matching.slice(0,6);grid.replaceChildren();visible.forEach(p=>{const b=document.createElement("button");b.type="button";b.className="project-card";b.setAttribute("aria-label","View "+p.title);const summary=p.description.length>230?p.description.slice(0,230).replace(/\s+\S*$/,'')+"…":p.description;b.innerHTML=(p.images ? '<div class="project-art has-image"'+(p.coverFit==='contain'?' data-fit="contain"':'')+'><img src="'+p.images[0].src+'" alt="'+escapeHtml(p.images[0].caption)+'" loading="lazy" width="1400" height="1000"></div>' : '<div class="project-art" style="--art:'+p.art+';--shape:'+p.shape+'"><span class="project-ghost">'+p.short+'</span></div>')+'<div class="project-info"><div><span class="project-meta">'+escapeHtml(categories[p.category]||"Project")+' · '+escapeHtml(p.location)+' · '+escapeHtml(p.year)+'</span><h3>'+escapeHtml(p.title)+'</h3><p class="project-summary">'+escapeHtml(summary)+'</p></div><span class="project-arrow" aria-hidden="true">↗</span></div>';b.addEventListener("click",()=>openProject(p));grid.append(b)});viewAllButton.hidden=matching.length<=6;viewAllButton.innerHTML=expanded?'Show fewer projects <span>↑</span>':'View all '+matching.length+' projects <span>↓</span>';viewAllButton.setAttribute("aria-expanded",String(expanded))}
+function openProject(p){document.querySelector("#dialog-type").textContent=categories[p.category]||"Project";document.querySelector("#dialog-location").textContent=p.location;document.querySelector("#dialog-year").textContent=p.year;document.querySelector("#dialog-title").textContent=p.title;document.querySelector("#dialog-description").textContent=p.description;const art=document.querySelector("#dialog-art");art.style.setProperty("--art",p.art);art.style.setProperty("--shape",p.shape);art.replaceChildren();art.classList.toggle('has-image',Boolean(p.images));
 if(p.images){const cover=document.createElement('img');cover.src=p.images[0].src;cover.alt=p.images[0].caption;art.append(cover)}
 document.querySelector('#dialog-credits').textContent=p.credits||'';
 document.querySelector('#dialog-status').textContent=p.status||'Detailed images and documentation coming soon.';
+const documentLink=document.querySelector('#dialog-document');documentLink.replaceChildren();documentLink.hidden=!p.document;if(p.document){const link=document.createElement('a');link.href=p.document.href;link.target='_blank';link.rel='noopener';link.textContent=p.document.label;documentLink.append(link)}
 const gallery=document.querySelector('#dialog-gallery');gallery.replaceChildren();
 for(const item of (p.images||[]).slice(1)){const figure=document.createElement('figure');const link=document.createElement('a');link.href=item.src;link.target='_blank';link.rel='noopener';link.setAttribute('aria-label','Open full image: '+item.caption);const image=document.createElement('img');image.src=item.src;image.alt=item.caption;image.loading='lazy';link.append(image);const caption=document.createElement('figcaption');caption.textContent=item.caption;figure.append(link,caption);gallery.append(figure)}
 dialog.showModal();dialog.scrollTop=0;history.replaceState(null,"","#project-"+p.id)}
