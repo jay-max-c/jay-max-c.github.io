@@ -12,13 +12,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261116-1">
-  <script defer src="script.js?v=20261116-1"></script>
+  <link rel="stylesheet" href="style.css?v=20261116-2">
+  <script defer src="script.js?v=20261116-2"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Jinlin Li — home"><span class="brand-name">JINLIN LI</span><span class="brand-titles"><span>Architecture · Art · Research</span></span></a>
+    <a class="brand" href="#home" aria-label="Jinlin Li — home"><span class="brand-name">JINLIN LI</span><span class="brand-titles"><span>Architectural Designer · Interdisciplinary Practice</span></span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation"><span></span><span></span></button>
     <nav id="site-nav" class="nav" aria-label="Main navigation">
       <a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
@@ -28,11 +28,11 @@
     <section id="home" class="personal-hero section-wrap">
       <div class="personal-hero-grid">
         <div class="personal-intro">
-          <h1>Jinlin Li</h1>
+          <h1 aria-label="Jinlin Li">Jinlin L<span class="name-i">i</span></h1>
           <p class="intro-role">Architectural Designer · Interdisciplinary Practice</p>
-          <p class="intro-lead">I approach design through real-world problems, examining needs, assumptions and constraints before choosing a form or medium. My practice connects architecture, art and digital methods, with an emphasis on clarity, quality and long-term usefulness.</p>
-          <p class="intro-body">I am interested in adaptive and sustainable design: how spaces, materials and experiences can respond to changing needs while making thoughtful use of existing resources.</p>
-          <div class="intro-actions"><a class="intro-primary" href="#about">More about me <span>↗</span></a><a class="intro-secondary" href="#work">Explore my work ↓</a><a class="intro-secondary" href="assets/Jinlin_Li_Academic_CV_2026_3B.docx" download>Download CV (Word) ↓</a></div>
+          <p class="intro-lead">I start with real-world problems. Before choosing a form or medium, I ask what people need and what constraints shape the project. I work across architecture, art, and digital media, using space, visuals, sound, and interaction where they can improve how people experience a place.</p>
+          <p class="intro-body">I’m interested in adaptive, sustainable design that makes good use of what already exists and stays useful as needs change.</p>
+          <div class="intro-actions"><a class="intro-primary" href="#about">About me <span>↗</span></a><a class="intro-secondary" href="#work">Explore my work ↓</a></div>
           <div class="intro-tags"><span>Problem-led Design</span><span>Sustainability</span><span>Interdisciplinary Practice</span></div>
         </div>
         <figure class="personal-photo">
@@ -41,32 +41,49 @@
       </div>
     </section>
     <section id="work" class="section-wrap work-section">
-      <div class="section-head"><div><h2><span lang="zh">项目</span> / Project</h2></div><span class="section-side">Architecture · Art · Research</span></div>
+      <div class="section-head"><div><h2>Projects and Research</h2></div></div>
       <div class="filter-bar" role="group" aria-label="Filter projects">
-        <button class="filter active" data-filter="all" aria-pressed="true">All <sup>11</sup></button>
+        <button class="filter active" data-filter="all" aria-pressed="true">All</button>
         <button class="filter" data-filter="architecture" aria-pressed="false">Architecture</button>
         <button class="filter" data-filter="art" aria-pressed="false">Art &amp; Installation</button>
         <button class="filter" data-filter="research" aria-pressed="false">Research</button>
       </div>
       <div class="project-grid" id="project-grid" aria-live="polite"></div>
       <button class="view-all-projects text-link" id="view-all-projects" type="button" hidden>View all projects <span>↓</span></button>
-      <p class="note">Selected projects appear first. Use the filters or view all projects to browse the complete archive. The Gaudí entry presents concept references; proposals, prototypes and process photographs are labelled.</p>
     </section>
     <section id="about" class="section-wrap about-section">
-      <div class="section-head"><div><h2>About &amp; experience<span class="period">.</span></h2></div></div>
-      <div class="about-grid">
-        <div class="about-method"><span class="eyebrow">DESIGN PROCESS</span><h3>From needs to tested decisions.</h3><ol><li>Identify needs</li><li>Map constraints</li><li>Check assumptions</li><li>Compare options</li><li>Verify and adjust</li></ol></div>
-        <div class="about-copy"><p class="lead">Adaptive design asks how environments can respond to different users, changing needs, site conditions and long-term use.</p>
-          <p>I treat adaptation as an approach that applies to both new and existing spaces. Depending on the problem, the work may connect spatial, material, visual, sound or interactive methods.</p>
-          <p>I value simplicity, quality, usefulness and sustainability. Form should respond to function, context and experience, with attention to materials, details and how a place can be used and maintained over time.</p>
+      <div class="section-head"><h2>About &amp; Experience<span class="period">.</span></h2></div>
+      <p class="about-statement">I believe there is beauty in how well something works. Laozi’s reflections on usefulness and the Bauhaus emphasis on function inform how I approach design. I use measured surveys, site analysis and physical models to test ideas for spaces that can adapt as needs change.</p>
+
+      <div class="about-cv">
+        <div>
+          <h3>Education</h3>
+          <p><strong>M.S. in Architecture · In progress</strong><br>Cracow University of Technology · Oct 2026–present</p>
+          <p><strong>B.S. in Architecture</strong><br>Cracow University of Technology · Oct 2022–Jul 2026</p>
+        </div>
+        <div>
+          <h3>Selected Experience</h3>
+          <p><strong>Heritage documentation · Poselska 7, Kraków</strong><br>Measured and photographed Room 8 for an ongoing conservation assessment.</p>
+          <p><strong>Landscape fieldwork &amp; sculpture · Sintra</strong><br>Used GIS contour analysis to study sites and developed sculpture proposals through sketches and physical models.</p>
+          <p><strong>Renovation &amp; exhibition coordination · ESCAC</strong><br>Coordinated renovation logistics and contributed to exhibition layouts in Barcelona.</p>
         </div>
       </div>
-      <div class="cv-grid about-background"><div><h3>Education</h3><div class="cv-item"><span>2026 — PRESENT</span><div><strong>Master's studies in Architecture</strong><p>Cracow University of Technology · Heritage Protection</p></div></div><div class="cv-item"><span>2023 — 2026</span><div><strong>B.S. in Architecture</strong><p>Cracow University of Technology</p></div></div></div>
-      <div><h3>Practice &amp; methods</h3><div class="cv-item"><span>PROJECT WORK</span><div><p>Architectural proposals, physical models, spatial and exhibition concepts, and visual research. Individual and collaborative roles are identified within each project where verified.</p></div></div><div class="cv-item"><span>DESIGN</span><div><p>Architectural design, adaptive reuse, spatial concepts and visual communication.</p></div></div><div class="cv-item"><span>DIGITAL</span><div><p>Rhino, Grasshopper, AutoCAD, QGIS, Blender, Unreal Engine and TouchDesigner.</p></div></div></div></div>
-      <p class="note"><a class="text-link" href="assets/Jinlin_Li_Academic_CV_2026_3B.docx" download>Download academic CV (Word) ↓</a></p>
+
+      <div class="about-teaching">
+        <h3>Teaching experience</h3>
+        <p><strong>Course Assistant · UPC–ETSAB</strong><br>Supported design critiques and gave feedback on structure and spatial organization · Sep 2025–Feb 2026.</p>
+        <p><strong>Guest Lecturer · Confucius Institute, Jagiellonian University</strong><br>Taught Chinese as a foreign language in English · Oct 2024–Feb 2025.</p>
+      </div>
+      <div class="about-certifications">
+        <h3>Certifications</h3>
+        <p>RIBA Part I<br>RIBA Part II</p>
+      </div>
+      <p><a class="text-link" href="assets/Jinlin_Li_Academic_CV_2026_3B.docx" download>Download academic CV (Word) ↓</a></p>
     </section>
+
     <section id="contact" class="contact-section" aria-labelledby="contact-name">
   <div class="section-wrap">
+    <span class="eyebrow">CONTACT</span>
     <div class="contact-layout">
       <h2 id="contact-name">JINLIN LI</h2>
       <dl class="contact-list">

@@ -12,6 +12,10 @@
 .personal-hero-grid{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);gap:7.5%;align-items:center;padding:45px 0 45px}
 .personal-intro{max-width:750px}
 .personal-intro h1{font-family:Manrope,sans-serif;font-size:clamp(76px,10.5vw,160px);line-height:.93;letter-spacing:-.09em;margin:0 0 34px;font-weight:700}
+.personal-intro h1 .name-i{position:relative;display:inline-block}
+.personal-intro h1 .name-i::before,.personal-intro h1 .name-i::after{content:"";position:absolute;z-index:1;left:50%;transform:translateX(-50%);pointer-events:none}
+.personal-intro h1 .name-i::before{top:.055em;width:.16em;height:.16em;background:var(--bg)}
+.personal-intro h1 .name-i::after{top:.105em;width:.09em;height:.09em;background:var(--accent)}
 .intro-role{font-size:clamp(17px,1.5vw,23px);font-weight:600;line-height:1.4;letter-spacing:-.025em;margin:0 0 28px}
 .intro-lead{font-size:clamp(18px,1.8vw,27px);line-height:1.48;letter-spacing:-.035em;margin:0 0 20px;max-width:650px}
 .intro-body{color:#626862;line-height:1.75;font-size:15px;max-width:570px;margin:0 0 30px}
@@ -106,8 +110,11 @@
 @media(prefers-reduced-motion:reduce){.project-card:hover .project-art:after,.project-card:hover .has-image>img{transform:none}}
 
 /* A quiet full-width tint marks the selected-work section. */
+#home{--bg:#18181A;--text:#F7F7F5;--rule:#48484A;position:relative;isolation:isolate;background:#18181A;color:#F7F7F5;box-shadow:0 0 0 100vmax #18181A;clip-path:inset(0 -100vmax)}
+#home .intro-body{color:#C4C4C2}
+#home .intro-tags span{color:#D1D1CF}
 .work-section{position:relative;isolation:isolate}
-.work-section::before{content:"";position:absolute;z-index:-1;inset:0;background:var(--work-surface,#222823);box-shadow:0 0 0 100vmax var(--work-surface,#222823);clip-path:inset(0 -100vmax);pointer-events:none}
+.work-section::before{content:"";position:absolute;z-index:-1;inset:0;background:var(--work-surface,#eeeee8);box-shadow:0 0 0 100vmax var(--work-surface,#eeeee8);clip-path:inset(0 -100vmax);pointer-events:none}
 
 /* About combines method, education and verified practice without repeating the homepage. */
 .about-method{border-top:1px solid var(--rule);padding-top:20px}
@@ -169,27 +176,42 @@
 }
 
 /* Work changes from paper to charcoal as its heading enters the viewport. */
-.work-section{--text:var(--work-ink,#f6f5f1);--muted:var(--work-muted,#b9c0b9);--rule:var(--work-rule,#505950);color:var(--text)}
+.work-section{--text:var(--work-ink,#1d211f);--muted:var(--work-muted,#59615b);--rule:var(--work-rule,#d9dbd4);color:var(--text)}
 .work-section .filter{color:var(--muted)}
 .work-section .filter.active{color:var(--text);border-bottom-color:var(--text)}
 .work-section .project-summary,.work-section .project-status,.work-section .note{color:var(--muted)}
 .work-section .project-card:hover .project-info h3,.work-section .project-card:focus-visible .project-info h3{color:var(--text)}
 .work-section .section-head h2,.about-section>.section-head h2{margin-top:0}
+#about{position:relative;isolation:isolate;background:transparent}
+#about::before{content:"";position:absolute;z-index:-1;inset:0;background:var(--about-surface,#f6f5f1);box-shadow:0 0 0 100vmax var(--about-surface,#f6f5f1);clip-path:inset(0 -100vmax);pointer-events:none}
 /* A single contact block keeps identity, details and footer together. */
-.contact-section>.section-wrap{max-width:620px;margin-inline:auto;padding-inline:28px}
-.contact-layout{display:flex;flex-direction:column;gap:24px;margin-top:18px}
-.contact-list{width:100%;gap:16px}
+.contact-layout,.contact-footer{width:100%;margin-inline:0}
+.contact-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,auto);gap:24px;margin-top:18px}
+.contact-list{width:100%;max-width:564px;justify-self:end;text-align:left;gap:16px}
+.contact-list .contact-phone{justify-content:flex-start}
 .contact-list>div{grid-template-columns:145px minmax(0,1fr);gap:16px}
 .contact-list a{overflow-wrap:anywhere}
 .contact-list a:hover{text-decoration:underline;text-underline-offset:4px}
-.contact-footer{justify-content:flex-start;flex-wrap:wrap;gap:12px 24px;margin-top:28px;padding-top:18px;border-top:1px solid var(--rule)}
+.contact-footer{justify-content:space-between;flex-wrap:wrap;gap:12px 24px;margin-top:28px;padding-top:18px;border-top:1px solid var(--rule)}
+.contact-footer>a{margin-left:auto;text-align:right}
 .contact-reveal-pending{opacity:0;transform:translateY(28px)}
 .contact-reveal-visible{opacity:1;transform:none;transition:opacity 600ms ease,transform 600ms cubic-bezier(.22,.61,.36,1)}
-@media(max-width:480px){
- .contact-section>.section-wrap{padding-inline:20px}
+@media(max-width:650px){
+ .contact-layout{grid-template-columns:minmax(0,1fr)}
+ .contact-list{width:auto;max-width:100%}
  .contact-list>div{grid-template-columns:1fr;gap:3px}
  .contact-list{gap:18px}
 }
 @media(prefers-reduced-motion:reduce){
  .contact-reveal-pending,.contact-reveal-visible{opacity:1;transform:none;transition:none}
 }
+
+/* About: a short statement followed by selected CV entries. */
+.about-statement{max-width:720px;font-size:clamp(17px,1.6vw,21px);line-height:1.65}
+.about-cv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px;margin-top:34px}
+.about-cv>div,.about-teaching,.about-certifications{border-top:1px solid var(--rule);padding-top:16px}
+.about-cv h3,.about-teaching h3,.about-certifications h3{margin:0 0 16px}
+.about-cv p,.about-teaching p,.about-certifications p{line-height:1.65}
+.about-teaching{margin-top:22px}
+.about-certifications{max-width:720px;margin-top:22px}
+@media(max-width:650px){.about-cv{grid-template-columns:1fr;gap:18px}}

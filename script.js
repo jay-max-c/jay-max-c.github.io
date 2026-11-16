@@ -311,12 +311,12 @@ document.querySelectorAll(".close-dialog").forEach(b=>b.addEventListener("click"
 dialog.addEventListener("click",e=>{if(e.target===dialog)closeProject()});dialog.addEventListener("close",()=>{if(location.hash.startsWith("#project-"))history.replaceState(null,"","#work")});
 const toggle=document.querySelector(".menu-toggle"),nav=document.querySelector(".nav");toggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open))});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false")}));
 document.querySelector("#year").textContent=String(new Date().getFullYear());
-document.querySelector('[data-filter="all"] sup').textContent=String(projects.length).padStart(2,'0');
 render();const deep=location.hash.match(/^#project-(.+)$/);if(deep){const p=projects.find(x=>x.id===(deep[1]==="sonic"?"yunxi":deep[1]));if(p)openProject(p)}
 
 // Keep scroll native; the work palette follows the section's entry progress.
 (()=>{
  const work=document.querySelector('#work');
+ const about=document.querySelector('#about');
  const contact=document.querySelector('#contact>.section-wrap');
  const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
  let queued=false;
@@ -325,11 +325,13 @@ render();const deep=location.hash.match(/^#project-(.+)$/);if(deep){const p=proj
   queued=false;
   if(!work)return;
   const h=window.innerHeight;
-  const p=motion.matches?1:Math.max(0,Math.min(1,(h*.95-work.getBoundingClientRect().top)/(h*.65)));
-  work.style.setProperty('--work-surface',mix([246,245,241],[34,40,35],p));
-  work.style.setProperty('--work-ink',p<.55?'#101510':'#ffffff');
-  work.style.setProperty('--work-muted',p<.55?'#222822':'#edf0ed');
-  work.style.setProperty('--work-rule',mix([217,219,212],[80,89,80],p));
+  const progress=section=>motion.matches?1:Math.max(0,Math.min(1,(h*.95-section.getBoundingClientRect().top)/(h*.65)));
+  const workProgress=progress(work);
+  work.style.setProperty('--work-surface',mix([24,24,26],[238,238,232],workProgress));
+  work.style.setProperty('--work-ink',mix([247,247,245],[29,33,31],workProgress));
+  work.style.setProperty('--work-muted',mix([196,196,194],[89,97,91],workProgress));
+  work.style.setProperty('--work-rule',mix([80,80,82],[217,219,212],workProgress));
+  if(about)about.style.setProperty('--about-surface',mix([238,238,232],[246,245,241],progress(about)));
  };
  const schedule=()=>{if(!queued){queued=true;requestAnimationFrame(paint)}};
  window.addEventListener('scroll',schedule,{passive:true});
