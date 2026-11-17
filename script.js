@@ -332,7 +332,7 @@ const projects=[
   },
   {
     "id": "sonora",
-    "title": "Sonoro Gaudí — 高迪之声",
+    "title": "Sonoro Gaudí 2026",
     "category": "art",
     "label": "Art & Installation · Exhibition Concept",
     "location": "Hangzhou, China",
@@ -342,7 +342,7 @@ const projects=[
     "shape": "radial-gradient(ellipse at 60% 55%,#796659 0 22%,transparent 23%),linear-gradient(40deg,#d1bca4,#99846f)",
     "description": "A concept proposal for Sonoro Gaudí 2026 at Hangzhou Golden Sands Lake Grand Theater. The presentation connects art, nature and origins through installations in the theater’s public spaces, alongside exhibition, audiovisual, performance and cultural programming. The gallery includes proposal pages, sculpture maquettes and a wiring diagram as concept and development material; it does not establish that the installations were built.",
     "status": "Concept proposal & development material · Implementation unconfirmed",
-    "credits": "Source: 高迪之声 2026-杭州金沙湖大剧院, concept presentation, pages 1–3. Team credits and Jinlin Li’s individual contribution remain to be confirmed.",
+    "credits": "Source: Sonoro Gaudí 2026 concept presentation for Hangzhou Golden Sands Lake Grand Theater, pages 1–3. Team credits and Jinlin Li’s individual contribution remain to be confirmed.",
     "images": [
       {
         "src": "assets/projects/gaudi-1.webp",
